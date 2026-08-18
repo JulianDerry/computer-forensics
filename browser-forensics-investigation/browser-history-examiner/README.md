@@ -8,6 +8,7 @@
 | **Analyst** | Julian Derry |
 | **Date of Analysis** | 18 August 2026 |
 | **Evidence Type** | Chrome Browser Profile |
+| **Tool** | Brwoser History Examiner v1.22.1 |
 
 > *This report documents a GUI-based browser forensic examination using Browser History Examiner. The results were also manually examined using Autopsy to provide an independent comparison of the browser-history examination workflow.*
 
