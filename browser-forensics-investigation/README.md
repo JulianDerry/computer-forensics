@@ -112,17 +112,17 @@ The tool also provided keyword, date, time, and browser filtering. The capture w
 
 The Website Visits view records **27,676 visits** across the examined period. The summary identifies Google, GitHub, LinkedIn, Gmail, X, TryHackMe, YouTube, ChatGPT, Google Drive, and other services among the most frequently visited domains. The presence of a large number of visits demonstrates the usefulness of a summarized domain view when triaging a browser profile before moving to individual records.
 
-![Figure 12: Website-visit summary showing the highest-volume domains in the examined browser profile.](media/image1.png)
+<img width="1915" height="1029" alt="Screenshot 2026-08-18 145234" src="https://github.com/user-attachments/assets/d9f688e3-fcae-46a3-9dab-79039bfda813" />
 
-*Figure 12. Website-visit summary showing the highest-volume domains in the examined browser profile.*
+*Website-visit summary showing the highest-volume domains in the examined browser profile.*
 
 ### 6.2 Search Activity
 
 The Searches artifact contains **10,727 records**. The search view provides the date searched, search terms, search engine, URL, source, and browser profile. This artifact is particularly useful for reconstructing the subjects the user was actively researching.
 
-![Figure 13: Search artifacts showing handgun-related queries and other searches recorded in Chrome.](media/image2.png)
+<img width="1917" height="1031" alt="Screenshot 2026-08-18 145758" src="https://github.com/user-attachments/assets/2c2763a5-9598-422e-84e1-b4df03895395" />
 
-*Figure 13. Search artifacts showing handgun-related queries and other searches recorded in Chrome.*
+*Search artifacts showing handgun-related queries and other searches recorded in Chrome.*
 
 ---
 
@@ -140,9 +140,9 @@ The Downloads artifact provides additional context. The supplied screenshot show
 
 Taken together, the search queries, firearm-related website visits, and firearm-related downloads provide multiple independent browser artifacts supporting the assessment that the user was researching handguns. The available evidence does not establish a purchase, physical possession, ownership, or intent to commit an offence.
 
-![Figure 6: Download artifacts including a Beretta 92A1 image, a Ruger P97 manual, and other downloaded files.](media/image3.png)
+<img width="1917" height="1032" alt="Screenshot 2026-08-18 144839" src="https://github.com/user-attachments/assets/1d4f24c2-1006-44ff-b457-bf8f176c19f4" />
 
-*Figure 6. Download artifacts including a Beretta 92A1 image, a Ruger P97 manual, and other downloaded files.*
+*Download artifacts including a Beretta 92A1 image, a Ruger P97 manual, and other downloaded files.*
 
 ---
 
@@ -152,9 +152,9 @@ Taken together, the search queries, firearm-related website visits, and firearm-
 
 The examination identified **42 bookmark records**. The bookmark view includes creation date, URL, last accessed date, expiry, name/content, and browser profile. Bookmark artifacts can be useful because they may indicate webpages intentionally saved by the browser user, although the existence of a bookmark alone does not establish the reason it was saved.
 
-![Figure 5: Recovered browser records showing repeated activity associated with Armscor.](media/image4.png)
+<img width="1919" height="1031" alt="Screenshot 2026-08-18 144757" src="https://github.com/user-attachments/assets/26535ead-e5f6-4761-9b98-90c4b1954d47" />
 
-*Figure 5. Recovered browser records showing repeated activity associated with Armscor.*
+*Recovered browser records showing repeated activity associated with Armscor.*
 
 ### 8.2 Downloads
 
@@ -164,23 +164,23 @@ Browser History Examiner identified **136 download records**. The supplied recor
 
 **Ten saved-login records** were identified. The supplied screenshot shows login records associated with domains including LinkedIn, Netflix, Adobe services, PrivateEmail, Belkasoft, `cipher.hivedfir.com`, and Roadtrace. The records include hostname, origin URL, submit URL, username, creation date, last-used date, password-change information, and times used. Password values were not reproduced in this report.
 
-![Figure 11: Saved login artifacts recovered from the browser profile.](media/image5.png)
+<img width="1916" height="1030" alt="Screenshot 2026-08-18 145152" src="https://github.com/user-attachments/assets/e05ea3db-3455-437d-8515-8ad0f8e52cc1" />
 
-*Figure 11. Saved login artifacts recovered from the browser profile.*
+*Saved login artifacts recovered from the browser profile.*
 
 ### 8.4 Form History and Email Addresses
 
 The examination identified **661 form-history records** and **98 email-address records**. Examples in the supplied material include form activity associated with GitHub, Whois, VirusTotal, MXToolbox, and other services. These artifacts can provide supporting context for user activity and may help correlate browser interactions with other evidence.
 
-![Figure 10: Form-history artifacts showing stored search/form values and associated domains.](media/image6.png)
+<img width="1916" height="1032" alt="Screenshot 2026-08-18 145136" src="https://github.com/user-attachments/assets/b988a754-56e4-439e-9665-8ba4ca5c3927" />
 
-*Figure 10. Form-history artifacts showing stored search/form values and associated domains.*
+*Form-history artifacts showing stored search/form values and associated domains.*
 
 ### 8.5 Browser Extensions
 
 **Nine browser extensions** were identified. The supplied extension view includes AdGuard AdBlocker, Chrome Web Store Payments, Claude in Chrome, FastApply, Google Docs Offline, and other extensions. Extension artifacts can be relevant in a forensic examination because they establish software installed within the browser profile and may help explain browser behavior or identify additional sources of activity.
 
-![Figure 8: Browser extensions recovered from the Chrome Default profile.](media/image7.png)
+<img width="1916" height="1030" alt="Screenshot 2026-08-18 144920" src="https://github.com/user-attachments/assets/2b9863f8-85ce-42f8-9f0a-44bae1d95b6a" />
 
 *Figure 8. Browser extensions recovered from the Chrome Default profile.*
 
