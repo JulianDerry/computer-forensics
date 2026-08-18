@@ -28,7 +28,6 @@
 12. [Findings and Interpretation](#12-findings-and-interpretation)
 13. [Limitations](#13-limitations)
 14. [Conclusion](#14-conclusion)
-15. [Figures](#15-figures)
 
 ---
 
@@ -254,48 +253,5 @@ The parallel manual examination using Autopsy demonstrated the value of both app
 
 ---
 
-## 15. Figures
-
-- **Figure 1.** Browser History Examiner interface and browser-history capture options.
-- **Figure 2.** Browser History Examiner capture workflow showing user-profile and browser selection options.
-- **Figure 3.** Browser History Examiner examination interface during evidence processing.
-- **Figure 4.** Browser History Examiner extraction process showing Chrome bookmarks, form history, logins, and session-tab extraction.
-- **Figure 5.** Recovered browser records showing repeated activity associated with Armscor.
-- **Figure 6.** Download artifacts including a Beretta 92A1 image, a Ruger P97 manual, and other downloaded files.
-- **Figure 7.** Email-address artifacts and associated website activity recovered from the Chrome profile.
-- **Figure 8.** Browser extensions recovered from the Chrome Default profile.
-- **Figure 9.** Favicon artifacts, including entries associated with GitHub, VS Code, and other visited services.
-- **Figure 10.** Form-history artifacts showing stored search/form values and associated domains.
-- **Figure 11.** Saved login artifacts recovered from the browser profile.
-- **Figure 12.** Website-visit summary showing the highest-volume domains in the examined browser profile.
-- **Figure 13.** Search artifacts showing handgun-related queries and other searches recorded in Chrome.
-
 ---
 
-## Appendix A: Examination Screenshots
-
-![Figure 1: Browser History Examiner interface and browser-history capture options.](media/image8.png)
-
-*Figure 1. Browser History Examiner interface and browser-history capture options.*
-
-![Figure 2: Browser History Examiner capture workflow showing user-profile and browser selection options.](media/image9.png)
-
-*Figure 2. Browser History Examiner capture workflow showing user-profile and browser selection options.*
-
-![Figure 3: Browser History Examiner examination interface during evidence processing.](media/image10.png)
-
-*Figure 3. Browser History Examiner examination interface during evidence processing.*
-
-![Figure 4: Browser History Examiner extraction process showing Chrome bookmarks, form history, logins, and session-tab extraction.](media/image11.png)
-
-*Figure 4. Browser History Examiner extraction process showing Chrome bookmarks, form history, logins, and session-tab extraction.*
-
-![Figure 7: Email-address artifacts and associated website activity recovered from the Chrome profile.](media/image12.png)
-
-*Figure 7. Email-address artifacts and associated website activity recovered from the Chrome profile.*
-
-![Figure 9: Favicon artifacts, including entries associated with GitHub, VS Code, and other visited services.](media/image13.png)
-
-*Figure 9. Favicon artifacts, including entries associated with GitHub, VS Code, and other visited services.*
-
----
