@@ -6,7 +6,7 @@ Digital forensic examination demonstrating recovery of data from a formatted USB
 
 | Field | Value |
 |---|---|
-| **Case Reference** | DFIR-2026-RMF-011 |
+| **Case Reference** | DFIR-2026-ELRC-011 |
 | **Evidence Source** | Live acquisition, local system drive (C:\) |
 | **Investigator** | Julian Derry |
 | **Date of Analysis** | February 09, 2026 |
