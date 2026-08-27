@@ -17,13 +17,17 @@ Digital forensic examination demonstrating recovery of data from a formatted USB
 ## Table of Contents
 
 1. [Objectives](#1-objectives)
-2. [Phase 1: Collect Evidence with GKAPE](#2-phase-1-collect-evidence-with-gkape)
-3. [Phase 2: Verify Evidence Collection](#3-phase-2-verify-evidence-collection)
-4. [Phase 3: Parse the Event Logs and Registry Hives](#4-phase-3-parse-the-event-logs-and-registry-hives)
-5. [Normal Startup vs Unexpected Shutdown](#5-normal-startup-vs-unexpected-shutdown)
-6. [Correlating Event Viewer with Parsed Results](#6-correlating-event-viewer-with-parsed-results)
-7. [Findings](#7-findings)
-8. [Conclusion](#8-conclusion)
+2. [Table of Evidence Sources](#2-table-of-evidence-sources)
+3. [Phase 1: Collect Evidence with GKAPE](#3-phase-1-collect-evidence-with-gkape)
+4. [Phase 2: Verify Evidence Collection](#4-phase-2-verify-evidence-collection)
+5. [Evidence Integrity Verification](#5-evidence-integrity-verification)
+6. [Phase 3: Parse Event Logs and Registry Hives](#6-phase-3-parse-event-logs-and-registry-hives)
+7. [Normal Startup vs Unexpected Shutdown](#7-normal-startup-vs-unexpected-shutdown)
+8. [Correlating Event Viewer with Parsed Results](#8-correlating-event-viewer-with-parsed-results)
+9. [Correlation of Event Logs and Registry Evidence](#9-correlation-of-event-logs-and-registry-evidence)
+10. [Findings](#10-findings)
+11. [Post-Examination Integrity Verification](#11-post-examination-integrity-verification)
+12. [Conclusion](#12-conclusion)
 
 ## 1. Objectives
 
@@ -34,7 +38,11 @@ The purpose of this exercise is for me to correlate Windows Event Logs with Regi
 - Identify abnormal or unexpected shutdowns.
 - Verify whether system reboots were user initiated.
 
-## 2. Phase 1: Collect Evidence with GKAPE
+## 2. Table of Evidence Sources
+
+| Evidence Source | Acquisition Tool | Hashing Tool |
+|---|---|---|
+| **C:** | GKAPE | PowerShell |
 
 I ran GKAPE as Administrator and selected my source to be `C:\`.
 
@@ -54,6 +62,12 @@ Next, I selected my destination folders for both Targets and Modules.
 <img width="769" height="329" alt="Screenshot 2026-08-26 114236" src="https://github.com/user-attachments/assets/f41368c9-3cae-461f-b25f-571f27a0b9cf" />
 
 <img width="768" height="456" alt="Screenshot 2026-08-26 114244" src="https://github.com/user-attachments/assets/e0fbc869-2908-4dc6-a414-b19528bce273" />
+
+
+**GKAPE Output Folder Hashed using PowerShell**
+
+<img width="1115" height="283" alt="Screenshot 2026-08-27 105516" src="https://github.com/user-attachments/assets/4a7a43b9-3df0-4aa2-a771-7430ab07edf2" />
+
 
 ## 3. Phase 2: Verify Evidence Collection
 
@@ -158,6 +172,19 @@ I confirmed that Event ID 1074 shows a graceful, user-initiated restart and prov
 
 <img width="1402" height="255" alt="Screenshot 2026-08-26 160602" src="https://github.com/user-attachments/assets/3b514dd8-82d7-4eae-9d5f-d2549e2a8142" />
 
+## 8. Post-Examination Integrity Verification
+
+<img width="1110" height="454" alt="Screenshot 2026-08-27 105611" src="https://github.com/user-attachments/assets/14d0efe2-7072-407d-912a-0f935d68adc3" />
+
+
 ## 8. Conclusion
 
-Using GKAPE, EvtxECmd, and RECmd, I successfully collected and parsed the Windows Event Logs and Registry Hives. By correlating the original Event Viewer records with the EvtxECmd output, I verified the consistency of the evidence and reconstructed the system timeline. My analysis identified both normal reboot activity and an unexpected shutdown, providing a reliable forensic timeline for system activity.
+This examination demonstrated the collection, verification, parsing, and correlation of Windows Event Logs and Registry Hives using GKAPE, EvtxECmd, and RECmd.
+
+GKAPE was used to acquire the relevant Windows forensic artifacts. EvtxECmd was used to parse the Windows Event Logs, while RECmd was used to examine the Registry Hives.
+
+The Event Log analysis established evidence of system startup, unexpected shutdown activity, and a user-associated restart. Event IDs 41 and 6008 indicated an unexpected shutdown, while Event ID 1074 identified MX50\CyberSamurai as the account associated with a restart on 3 Jun 2026 at 10:51:41 PM.
+
+The original Event Viewer records were also compared with the parsed EvtxECmd output to validate the identified Event IDs and timestamps.
+
+The correlation of Event Logs and Registry evidence provides a stronger forensic reconstruction than relying on either evidence source independently. However, conclusions regarding malicious tampering or physical user presence require additional supporting evidence and should not be inferred from the Event IDs alone.
