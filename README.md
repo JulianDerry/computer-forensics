@@ -23,8 +23,8 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 | **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | `browser-forensics-investigation/browser-history-examiner` |
 | **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | `ntfs-timestomping-detection-kape` |
 | **Formatted USB Data Recovery** | Recovery of deleted data from a formatted USB drive using Magnet AXIOM Process and Examine | ✅ Complete | `data-recovery` |
-| **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | `steganography/png-steganography-forensics` |
-| **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | `steganography/metadata-steghide-flag-recovery` |
+| **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | [Steganography Forensics](steganography/png-steganography-forensics) |
+| **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | [Metadata and Steghide Flag Recovery](steganography/metadata-steghide-flag-recovery) |
 | **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | `hash-cracking/md5-hash-recovery` |
 | **PDF Password Hash Recovery** | Extraction and cracking of a password hash from a protected PDF | ✅ Complete | `hash-cracking/pdf-password-hash-recovery` |
 | **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | `office-2013-password-recovery-forensics` |
