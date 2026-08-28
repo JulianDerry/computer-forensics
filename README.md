@@ -1,55 +1,109 @@
 # Computer Forensics
 
-A structured portfolio of computer and Windows digital forensics investigations, artifact analysis exercises, data recovery work, and forensic reporting.
+Windows and general computer forensics covering disk artifacts, registry and file system analysis, data recovery, password and hash recovery, and steganographic examination.
 
-## Portfolio Areas
+Part of the **JulianDerry DFIR Portfolio**.
 
-### 🔎 Investigations
+---
+
+## Overview
+
+Most incident response cases begin and end on a Windows endpoint, and evidence often survives in places a user assumes are gone: formatted drives, timestomped files, password-protected documents, and images with data hidden within their pixel channels.
+
+This repository documents disk, USB, browser, and file recovery investigations, built to the same standard applied across the rest of the portfolio: **what the artifact shows, and what it can be shown to prove.**
+
+---
+
+## Case Index
+
+| Investigation | What it covers | Status | Repository |
+|--------------|----------------|--------|------------|
+| **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete | `usb-forensics/ntfs-host-based-usb-forensics` |
+| **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | `usb-forensics/usb-data-exfiltration-investigation` |
+| **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | `browser-forensics-investigation/browser-history-examiner` |
+| **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | `ntfs-timestomping-detection-kape` |
+| **Formatted USB Data Recovery** | Recovery of deleted data from a formatted USB drive using Magnet AXIOM Process and Examine | ✅ Complete | `data-recovery` |
+| **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | `steganography/png-steganography-forensics` |
+| **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | `steganography/metadata-steghide-flag-recovery` |
+| **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | `hash-cracking/md5-hash-recovery` |
+| **PDF Password Hash Recovery** | Extraction and cracking of a password hash from a protected PDF | ✅ Complete | `hash-cracking/pdf-password-hash-recovery` |
+| **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | `office-2013-password-recovery-forensics` |
+
+> **Adding new cases:** Follow the same pattern above: investigation name, one-line summary, status, and the relative folder path. This table serves as the repository's working index.
+
+> **Repository note:** `hash-cracking/office-2013-password-recovery` currently duplicates `office-2013-password-recovery-forensics` almost entirely (except for one image). Consider consolidating them into a single case before publishing.
+
+---
+
+## Planned Coverage
+
+The following areas are planned but do not yet have dedicated case folders:
 
 - Windows Disk Forensics
-- Windows Registry & User Activity
-- Browser Forensics
+- Windows Registry and User Activity
 - Windows Event Log Investigation
-- USB Device and Exfiltration Analysis
-- NTFS and File System Analysis
-- Timeline Reconstruction
-- Data Recovery
 - Memory Forensics Exercises
 
-### 🧪 Artifact Analysis
+---
 
-- Windows Registry
-- NTFS metadata
-- `$MFT`
-- Timeline artifacts
-- Browser artifacts
-- User activity traces
-- USB artifacts
-- File-system metadata
+## Methodology
 
-### 🛠️ Tooling & Automation
+Every investigation follows a consistent forensic workflow:
 
-Supporting analysis and automation using Python, PowerShell, KAPE, MFTECmd and other forensic utilities.
+1. Identification
+2. Preservation
+3. Acquisition
+4. Hash Verification
+5. Examination
+6. Analysis
+7. Correlation
+8. Timeline Reconstruction
+9. Reporting
 
-## Tools Used
+Automated parsing and password-cracking tools are used where appropriate, but all significant findings are manually verified against the underlying artifacts before being reported.
+
+---
+
+## Toolkit
 
 - FTK Imager
 - Autopsy
+- Sleuth Kit
 - Magnet AXIOM
 - KAPE
-- Volatility 3
 - MFTECmd
+- Registry Explorer
+- Eric Zimmerman's tools
+- USB Detective
+- Timeline Explorer
+- Browser History Examiner
+- Hashcat
+- John the Ripper
+- Steghide
+- Volatility 3
 - Python
 - PowerShell
 
-## Investigation Standard
+---
 
-Each substantial case study is documented around evidence acquisition, integrity verification, examination, artifact analysis, timeline reconstruction, correlation, findings, limitations and professional reporting.
+## Evidence & Reporting Standard
 
-## Portfolio Status
+Each investigation includes:
 
-This repository is part of the wider Julian Derry DFIR portfolio. Additional investigations and independent forensic tools are maintained in the other specialist repositories on the profile.
+- Acquisition method and chain of custody
+- Hash verification
+- Artifact examination and analysis
+- Timeline reconstruction (where applicable)
+- What the evidence established
+- What the evidence did **not** establish
+- Limitations and forensic considerations
 
-## Disclaimer
+All investigations are conducted using training datasets, laboratory environments, or authorized evidence sources for educational and professional portfolio purposes. No confidential client evidence is included.
 
-Investigations in this repository are conducted on training datasets, lab environments, or authorized evidence sources for educational and professional portfolio purposes. Portfolio material does not represent confidential client evidence.
+---
+
+## Contact
+
+- **LinkedIn**
+- **X (Twitter)**
+- **Email**
