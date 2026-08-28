@@ -101,6 +101,4 @@ All investigations are conducted using training datasets, laboratory environment
 
 ## Contact
 
-- **LinkedIn**
-- **X (Twitter)**
-- **Email**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julian-derry-936271312/) [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/CyberSamuraiDev)
