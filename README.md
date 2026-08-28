@@ -19,16 +19,16 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 | Investigation | What it covers | Status | Repository |
 |--------------|----------------|--------|------------|
 | **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete |[NTFS Host-Based USB Forensics](/usb-forensics/nfts-host-based-usb-forensics)|
-| **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | `usb-forensics/usb-data-exfiltration-investigation` |
+| **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | [USB Data Exfiltration Investigation](usb-forensics/usb-data-exfiltration-investigation) |
 | **Correlating Event Logs with Registry Hives** | Verifying event timelines using Event Logs and Registry Hives | ✅ Complete |[Event Log & Registry Correlation](event-log-registry-correlation)|
 | **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | [Browser History Examiner](browser-forensics-investigation/browser-history-examiner) |
-| **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | `ntfs-timestomping-detection-kape` |
+| **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | [NTFS Timestomping Detection](ntfs-timestomping-detection-Kape)|
 | **Formatted USB Data Recovery** | Recovery of deleted data from a formatted USB drive using Magnet AXIOM Process and Examine | ✅ Complete | `data-recovery` |
 | **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | [Steganography Forensics](steganography/png-steganography-forensics) |
 | **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | [Metadata and Steghide Flag Recovery](steganography/metadata-steghide-flag-recovery) |
-| **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | `hash-cracking/md5-hash-recovery` |
-| **PDF Password Hash Recovery** | Extraction and cracking of a password hash from a protected PDF | ✅ Complete | `hash-cracking/pdf-password-hash-recovery` |
-| **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | `office-2013-password-recovery-forensics` |
+| **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | [MD5 Hash Recovery](hash-cracking/md5-hash-recovery) |
+| **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | [Office 2013 Password Recovery Forensics](office-2013-password-recovery-forensics)
+ |
 
 ---
 
