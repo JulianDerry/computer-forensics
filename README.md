@@ -20,7 +20,7 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 |--------------|----------------|--------|------------|
 | **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete |[NTFS Host-Based USB Forensics](/usb-forensics/nfts-host-based-usb-forensics)|
 | **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | `usb-forensics/usb-data-exfiltration-investigation` |
-| **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | `browser-forensics-investigation/browser-history-examiner` |
+| **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | [Browser History Examiner](browser-forensics-investigation/browser-history-examiner) |
 | **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | `ntfs-timestomping-detection-kape` |
 | **Formatted USB Data Recovery** | Recovery of deleted data from a formatted USB drive using Magnet AXIOM Process and Examine | ✅ Complete | `data-recovery` |
 | **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | [Steganography Forensics](steganography/png-steganography-forensics) |
