@@ -29,10 +29,6 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 | **PDF Password Hash Recovery** | Extraction and cracking of a password hash from a protected PDF | ✅ Complete | `hash-cracking/pdf-password-hash-recovery` |
 | **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | `office-2013-password-recovery-forensics` |
 
-> **Adding new cases:** Follow the same pattern above: investigation name, one-line summary, status, and the relative folder path. This table serves as the repository's working index.
-
-> **Repository note:** `hash-cracking/office-2013-password-recovery` currently duplicates `office-2013-password-recovery-forensics` almost entirely (except for one image). Consider consolidating them into a single case before publishing.
-
 ---
 
 ## Planned Coverage
