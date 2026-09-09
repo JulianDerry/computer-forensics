@@ -20,6 +20,7 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 |--------------|----------------|--------|------------|
 | **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete |[NTFS Host-Based USB Forensics](/usb-forensics/nfts-host-based-usb-forensics)|
 | **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | [USB Data Exfiltration Investigation](usb-forensics/usb-data-exfiltration-investigation) |
+| **Windows Event Logs & Registry Correlation** | Correlating event logs with registry logs | ✅ Complete | [Windows Event Logs & Registry Correlation](windows-event-log-and-registry-correlation) |
 | **Correlating Event Logs with Registry Hives** | Verifying event timelines using Event Logs and Registry Hives | ✅ Complete |[Event Log & Registry Correlation](event-log-registry-correlation)|
 | **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | [Browser History Examiner](browser-forensics-investigation/browser-history-examiner) |
 | **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | [NTFS Timestomping Detection](ntfs-timestomping-detection-Kape)|
