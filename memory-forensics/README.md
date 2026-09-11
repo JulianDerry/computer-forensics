@@ -12,7 +12,7 @@ This section of the **Computer Forensics** portfolio documents practical memory-
 
 | Investigation | Focus | Status | Case Study |
 |---|---|---|---|
-| **Windows Memory Forensics & Artifact Correlation** | Windows RAM analysis, process enumeration, command-line review, network artifacts, DLL/module examination, and artifact correlation | ✅ Complete | [View Case Study](windows-memory-forensics-artifact-correlation/) |
+| **Windows Memory Forensics & Artifact Correlation** | Windows RAM analysis, process enumeration, command-line review, network artifacts, DLL/module examination, and artifact correlation | ✅ Complete | [View Case Study](memory-forensics/windows-memory-forensics-&-artifacts_correlation) |
 
 ---
 
