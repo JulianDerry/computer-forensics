@@ -10,7 +10,7 @@ Part of the **JulianDerry DFIR Portfolio**.
 
 Most incident response cases begin and end on a Windows endpoint, and evidence often survives in places a user assumes are gone: formatted drives, timestomped files, password-protected documents, and images with data hidden within their pixel channels.
 
-This repository documents disk, USB, browser, and file recovery investigations, built to the same standard applied across the rest of the portfolio: **what the artifact shows, and what it can be shown to prove.**
+This repository documents disk, USB, browser, file recovery, and memory forensics investigations, built to the same standard applied across the rest of the portfolio: **what the artifact shows, and what it can be shown to prove.**
 
 ---
 
@@ -18,18 +18,18 @@ This repository documents disk, USB, browser, and file recovery investigations, 
 
 | Investigation | What it covers | Status | Repository |
 |--------------|----------------|--------|------------|
-| **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete |[NTFS Host-Based USB Forensics](/usb-forensics/nfts-host-based-usb-forensics)|
+| **NTFS Host-Based USB Forensics** | USB device activity reconstruction from an E01 image using KAPE, Registry Explorer, and Eric Zimmerman tools | ✅ Complete | [NTFS Host-Based USB Forensics](/usb-forensics/nfts-host-based-usb-forensics) |
 | **USB Data Exfiltration Investigation** | FAT32 E01 image examined with Autopsy and Sleuth Kit to trace USB-based data exfiltration | ✅ Complete | [USB Data Exfiltration Investigation](usb-forensics/usb-data-exfiltration-investigation) |
 | **Windows Event Logs & Registry Correlation** | Correlating event logs with registry logs | ✅ Complete | [Windows Event Logs & Registry Correlation](windows-event-log-and-registry-correlation) |
-| **Correlating Event Logs with Registry Hives** | Verifying event timelines using Event Logs and Registry Hives | ✅ Complete |[Event Log & Registry Correlation](event-log-registry-correlation)|
+| **Correlating Event Logs with Registry Hives** | Verifying event timelines using Event Logs and Registry Hives | ✅ Complete | [Event Log & Registry Correlation](event-log-registry-correlation) |
 | **Browser Forensics Examination** | Chrome browser history examined with Browser History Examiner and cross-checked against Autopsy | ✅ Complete | [Browser History Examiner](browser-forensics-investigation/browser-history-examiner) |
-| **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | [NTFS Timestomping Detection](ntfs-timestomping-detection-Kape)|
+| **NTFS Timestomping Detection** | Timestomping simulation and detection using KAPE and MFTECmd with MFT timeline analysis | ✅ Complete | [NTFS Timestomping Detection](ntfs-timestomping-detection-Kape) |
 | **Formatted USB Data Recovery** | Recovery of deleted data from a formatted USB drive using Magnet AXIOM Process and Examine | ✅ Complete | [Formatted USB Data Recovery](formatted-usb-data-recovery) |
 | **PNG Image Steganography Investigation** | Recovery of concealed data hidden within a PNG image's pixel channels | ✅ Complete | [Steganography Forensics](steganography/png-steganography-forensics) |
 | **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | [Metadata and Steghide Flag Recovery](steganography/metadata-steghide-flag-recovery) |
 | **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | [MD5 Hash Recovery](hash-cracking/md5-hash-recovery) |
-| **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | [Office 2013 Password Recovery Forensics](office-2013-password-recovery-forensics)
- |
+| **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | [Office 2013 Password Recovery Forensics](office-2013-password-recovery-forensics) |
+| **Windows Memory Forensics & Artifact Correlation** | Windows 11 RAM analysis using Volatility 3, with KAPE/PSReadLine and Prefetch corroboration | ✅ Complete | [Windows Memory Forensics & Artifact Correlation](memory-forensics/windows-memory-forensics-artifact-correlation) |
 
 ---
 
@@ -40,7 +40,6 @@ The following areas are planned but do not yet have dedicated case folders:
 - Windows Disk Forensics
 - Windows Registry and User Activity
 - Windows Event Log Investigation
-- Memory Forensics Exercises
 
 ---
 
@@ -81,6 +80,7 @@ Automated parsing and password-cracking tools are used where appropriate, but al
 - Volatility 3
 - Python
 - PowerShell
+- Belkasoft RAM Capture
 
 ---
 
