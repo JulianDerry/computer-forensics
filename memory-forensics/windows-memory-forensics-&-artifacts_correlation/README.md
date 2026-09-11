@@ -4,6 +4,42 @@
 
 > A controlled Windows 11 memory-forensics investigation demonstrating process analysis, document discovery, command-execution reconstruction, browser-memory examination, deleted-file remnants, and cross-artifact correlation.
 
+## Table of Contents
+
+- [Case Information](#case-information)
+- [Scenario](#scenario)
+- [Investigation Objectives](#investigation-objectives)
+- [Controlled Test Environment](#controlled-test-environment)
+  - [Phase A — Normal User Activity](#phase-a--normal-user-activity)
+  - [Phase B — Controlled Forensic Activity](#phase-b--controlled-forensic-activity)
+- [Memory Acquisition](#memory-acquisition)
+  - [Evidence Integrity](#evidence-integrity)
+- [System Identification](#system-identification)
+  - [Findings](#findings)
+- [Process Analysis](#process-analysis)
+  - [Active Processes — `pslist`](#active-processes--pslist)
+  - [Memory Scan for Process Structures — `psscan`](#memory-scan-for-process-structures--psscan)
+- [Cross-Artifact Corroboration](#cross-artifact-corroboration)
+- [Identifying User Activity](#identifying-user-activity)
+- [Recovering Opened Documents](#recovering-opened-documents)
+  - [`Confidential_Report.pdf`](#confidential_reportpdf)
+  - [`Project_Notes.docx`](#project_notesdocx)
+- [Command Execution Analysis](#command-execution-analysis)
+  - [Objective](#objective)
+- [Network Activity](#network-activity)
+  - [Result](#result)
+- [Browser Activity](#browser-activity)
+  - [Findings](#findings-1)
+- [Deleted File Remnants](#deleted-file-remnants)
+  - [Findings](#findings-2)
+- [Correlated Timeline](#correlated-timeline)
+- [Evidence Matrix](#evidence-matrix)
+- [Objective Assessment](#objective-assessment)
+- [Conclusion](#conclusion)
+- [Tools Used](#tools-used)
+- [Forensic Takeaways](#forensic-takeaways)
+- [Portfolio Context](#portfolio-context) 
+
 ---
 
 ## Case Information
@@ -61,8 +97,8 @@ Test files created on the Desktop:
 - `passwords.txt`
 - `investigation.txt`
 
-> **Figure 1 — Controlled Windows 11 Environment**  
-> _Insert screenshot showing the desktop with the created test files._
+> **Figure 1. Controlled Windows 11 Environment**  
+<img width="854" height="655" alt="Screenshot 2026-09-03 120218" src="https://github.com/user-attachments/assets/88d2030c-dc40-4b00-a8d7-a061b55e2662" />
 
 ### Phase B — Controlled Forensic Activity
 
@@ -87,8 +123,8 @@ This controlled sequence allowed me to compare known user activity against artif
 
 I acquired physical memory using **Belkasoft RAM Capture** while the operating system was still running.
 
-> **Figure 2 — Belkasoft RAM Capture**  
-> _Insert screenshot of the completed memory acquisition._
+> **Figure 2. Belkasoft RAM Capture**  
+<img width="1919" height="1079" alt="Screenshot 2026-09-03 120459" src="https://github.com/user-attachments/assets/3ed0bba6-05d2-424e-be47-b9ce754c55e7" />
 
 ### Evidence Integrity
 
@@ -100,8 +136,8 @@ Get-FileHash "C:\Users\CyberSamurai\Desktop\BlkasoftRamCapturer\x64\WIN_RAM.mem"
 
 The hash was calculated after memory acquisition and serves only to verify the integrity of the captured evidence. It is not evidence of pre-acquisition user activity.
 
-> **Figure 3 — SHA-256 Hash Verification**  
-> _Insert `Get-FileHash` output._
+> **Figure 3. SHA-256 Hash Verification**  
+<img width="1914" height="1029" alt="Screenshot 2026-09-03 120859" src="https://github.com/user-attachments/assets/9d1f736d-3c0c-4f4c-ad41-530838a42c75" />
 
 ---
 
@@ -126,8 +162,8 @@ python3 vol.py -f "/mnt/hgfs/SHARED FOLDER/WIN_RAM.mem" windows.info
 
 The memory image was successfully identified as a Windows 11 Build 26100 system with correctly resolved symbols, providing a reliable foundation for subsequent analysis.
 
-> **Figure 4 — Volatility `windows.info` Output**  
-> _Insert `windows.info` screenshot._
+> **Figure 4. Volatility `windows.info` Output**  
+<img width="1269" height="1071" alt="Screenshot 2026-09-03 124501" src="https://github.com/user-attachments/assets/aec88de2-df64-4857-9bfa-b8c00082e979" />
 
 ---
 
@@ -143,8 +179,10 @@ python3 vol.py -f "/mnt/hgfs/SHARED FOLDER/WIN_RAM.mem" windows.pslist
 
 The output confirmed the presence of several applications that I intentionally left open before acquisition.
 
-> **Figure 5 — Active Process List (`pslist`)**  
-> _Insert `windows.pslist` screenshot._
+> **Figure 5. Active Process List (`pslist`)**  
+<img width="1395" height="256" alt="Screenshot 2026-09-03 161954" src="https://github.com/user-attachments/assets/95ff56a8-09e9-480b-b96b-ce0a1d415e5c" />
+<img width="1396" height="461" alt="Screenshot 2026-09-03 162038" src="https://github.com/user-attachments/assets/e519c0bb-fd8a-4f60-9c15-c76e6fb7b286" />
+
 
 ### Memory Scan for Process Structures — `psscan`
 
@@ -158,8 +196,8 @@ Unlike `pslist`, `psscan` searches memory for process structures and may identif
 
 This distinction is important because several applications appeared in both plugins, demonstrating consistency rather than concealment.
 
-> **Figure 6 — Process Scan (`psscan`)**  
-> _Insert `windows.psscan` screenshot._
+> **Figure 6. Process Scan (`psscan`)**  
+<img width="1404" height="957" alt="Screenshot 2026-09-03 175531" src="https://github.com/user-attachments/assets/6843c432-9ea4-4196-940e-ed85262f2815" />
 
 ---
 
@@ -169,8 +207,8 @@ To strengthen the investigation, I compared Volatility results with Windows Pref
 
 Prefetch demonstrated that many of the same applications executed within the relevant timeframe. I intended to further corroborate this with Amcache and its transaction logs; however, the transaction logs were not available, so the newest Amcache entries could not be verified.
 
-> **Figure 7 — Prefetch Corroboration**  
-> _Insert Prefetch screenshot._
+> **Figure 7. Prefetch Corroboration**  
+<img width="719" height="783" alt="Screenshot 2026-09-07 183108" src="https://github.com/user-attachments/assets/f8951586-d37a-4e26-998a-57c3b16d1fd1" />
 
 ---
 
@@ -193,8 +231,9 @@ grep -Ei "chrome|msedge|firefox|explorer|winword|notepad|powershell|pwsh|cmd|Acr
 
 This significantly reduced noise and made timeline reconstruction easier. Not every returned process was manually launched by me; some were background services or child processes spawned by applications.
 
-> **Figure 8 — Filtered User Processes**  
-> _Insert filtered `psscan` results._
+> **Figure 8. Filtered User Processes**  
+ <img width="1404" height="957" alt="Screenshot 2026-09-03 175531" src="https://github.com/user-attachments/assets/38c8d6d7-741f-494c-8793-5c9ee07bb42b" />
+
 
 ---
 
@@ -217,8 +256,9 @@ strings -a -t x "/mnt/hgfs/SHARED FOLDER/WIN_RAM.mem" | grep -i "Confidential_Re
 
 The recovered strings indicate that Windows and user applications had the file path loaded into memory, supporting the conclusion that the document had recently been accessed. They do **not** independently establish the exact time the document was opened.
 
-> **Figure 9 — Memory Strings for `Confidential_Report.pdf`**  
-> _Insert `strings` output._
+> **Figure 9. Memory Strings for `Confidential_Report.pdf`**  
+<img width="1905" height="691" alt="Screenshot 2026-09-06 150544" src="https://github.com/user-attachments/assets/6ec1ff79-ad40-4983-be7c-7bca4dfa89d7" />
+
 
 ### `Project_Notes.docx`
 
@@ -237,8 +277,9 @@ strings -a -t x "/mnt/hgfs/SHARED FOLDER/WIN_RAM.mem" | grep -i "Project_Notes.d
 
 These findings support the assessment that the document had been accessed during my controlled activity, although RAM alone does not establish the precise access timestamp.
 
-> **Figure 10 — Memory Strings for `Project_Notes.docx`**  
-> _Insert recovered strings screenshot._
+> **Figure 10. Memory Strings for `Project_Notes.docx`**  
+<img width="1838" height="961" alt="Screenshot 2026-09-07 133001" src="https://github.com/user-attachments/assets/03e4de0f-c866-4cd8-98f6-3871e4169a26" />
+
 
 ---
 
@@ -280,8 +321,11 @@ netstat
 
 I therefore concluded that command execution was established through **cross-artifact correlation, not from RAM alone**.
 
-> **Figure 11 — PSReadLine Command History**  
-> _Insert `ConsoleHost_history.txt` screenshot._
+> **Figure 11. PSReadLine Command History**  
+<img width="730" height="172" alt="Screenshot 2026-09-09 001428" src="https://github.com/user-attachments/assets/59e989cb-c09a-41c1-b01e-98b3480d724e" />
+<img width="1426" height="735" alt="Screenshot 2026-09-09 002345" src="https://github.com/user-attachments/assets/b7853eab-00f0-4c7b-a726-b883bcdb7825" />
+
+
 
 ---
 
@@ -298,9 +342,6 @@ python3 vol.py -f "/mnt/hgfs/SHARED FOLDER/WIN_RAM.mem" windows.netscan
 No usable network connection artifacts were recovered from the captured memory image using either Volatility 3 in Kali Linux or Volatility Workbench in Windows.
 
 The correct forensic conclusion is **not** that no network connections existed. The evidence only supports that network connections could not be established from the available memory evidence.
-
-> **Figure 12 — `windows.netscan` Output**  
-> _Insert `netscan` screenshot, including no results if applicable._
 
 ---
 
@@ -326,11 +367,12 @@ strings -a pid.43804.dmp | grep -Eio 'https?://[^\"]+'
 
 However, I could not reconstruct a reliable timestamped browsing history from RAM alone. For that purpose, browser profile artifacts or Browser History Examiner would provide stronger evidence and are addressed in a separate browser-forensics project.
 
-> **Figure 13 — Firefox Process Dump**  
-> _Insert `windows.memmap` screenshot._
+> **Figure 13. Firefox Process Dump**
+> <img width="888" height="336" alt="Screenshot 2026-09-07 170536" src="https://github.com/user-attachments/assets/15d0e8e5-8cf2-416c-a46c-a3d03628e31a" />
 
-> **Figure 14 — Recovered URL Strings**  
-> _Insert extracted URL results._
+
+> **Figure 14. Recovered URL Strings**  
+<img width="1906" height="910" alt="Screenshot 2026-09-07 170831" src="https://github.com/user-attachments/assets/065c4142-2adc-4eae-9ab9-368f7a0173e3" />
 
 ---
 
@@ -352,7 +394,7 @@ Memory contained identifiable remnants associated with `passwords.txt - Copy`.
 Although I knew from my controlled activity that the file had been deleted, the recovered memory strings did **not** independently establish the exact deletion timestamp. In a real investigation, additional artifacts such as the MFT, USN Journal, or Recycle Bin metadata would be required to prove when deletion occurred.
 
 > **Figure 15 — Deleted File Memory Remnants**  
-> _Insert `passwords.txt - Copy` strings output._
+<img width="1061" height="913" alt="Screenshot 2026-09-04 184711" src="https://github.com/user-attachments/assets/de2292cc-749c-45b6-a1c4-ffe957737077" />
 
 ---
 
@@ -371,10 +413,6 @@ Although I knew from my controlled activity that the file had been deleted, the 
 | SHA-256 integrity verified | PowerShell | **High** |
 
 > **Note:** This timeline separates observed forensic evidence from my known controlled activity. Events are included only where supporting artifacts exist.
-
-> **Figure 16 — Final Investigation Timeline**  
-> _Insert timeline graphic or annotated screenshot._
-
 ---
 
 ## Evidence Matrix
