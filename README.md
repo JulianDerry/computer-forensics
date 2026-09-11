@@ -29,7 +29,7 @@ This repository documents disk, USB, browser, file recovery, and memory forensic
 | **Metadata and Steghide Flag Recovery** | PicoCTF challenge involving metadata analysis, Base64 decoding, and Steghide extraction | ✅ Complete | [Metadata and Steghide Flag Recovery](steganography/metadata-steghide-flag-recovery) |
 | **MD5 Hash Recovery** | Identification and cracking of an unknown MD5 hash using Hashcat | ✅ Complete | [MD5 Hash Recovery](hash-cracking/md5-hash-recovery) |
 | **Microsoft Office 2013 Password Recovery** | Offline password cracking of a protected Office document using Office2John and Hashcat | ✅ Complete | [Office 2013 Password Recovery Forensics](office-2013-password-recovery-forensics) |
-| **Windows Memory Forensics & Artifact Correlation** | Windows 11 RAM analysis using Volatility 3, with KAPE/PSReadLine and Prefetch corroboration | ✅ Complete | [Windows Memory Forensics & Artifact Correlation](memory-forensics/windows-memory-forensics-artifact-correlation) |
+| **Windows Memory Forensics & Artifact Correlation** | Windows 11 RAM analysis using Volatility 3, with KAPE/PSReadLine and Prefetch corroboration | ✅ Complete | [Windows Memory Forensics & Artifact Correlation](memory-forensics/windows-memory-forensics-&-artifacts_correlation) |
 
 ---
 
